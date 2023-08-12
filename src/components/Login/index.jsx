@@ -40,6 +40,7 @@ function Login (){
     return(
         <>  
         <p> Logo da Pagina </p>
+        {/* <img src="../../assets/image/logotipo.jpeg" alt="Logo da Farmácia" />       */}
         <p> Texto </p>
         
         <TextField 
