@@ -24,13 +24,16 @@ function Login (){
         
         return atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1;
     };
+    // const isValidSenha = (password) => {
+    //     let passwordValid = false;
+    //     if (password.length >= 8){
+    //         passwordValid= true
+    //     }
+    //     console.log("passwordValid", passwordValid)
+    //     return passwordValid;
+    // }
     const isValidSenha = (password) => {
-        let passwordValid = false;
-        if (password.length >= 8){
-            passwordValid= true
-        }
-        console.log("passwordValid", passwordValid)
-        return passwordValid;
+        return password.length >= 8 && /[a-zA-Z]/.test(password) && /\d/.test(password);
     }
     console.log("showError", showError)
 
@@ -56,7 +59,7 @@ function Login (){
             onChange={(e) => setPassword(e.target.value)}
             // inputProps={{ minLength:8 }}
         /> 
-        {showError ? <p> Digite um email válido e senha com pelo menos 8 caracteres.</p>:''}
+        {showError ? <p> Digite um email válido e senha alfanumérica com pelo menos 8 caracteres.</p>:''}
 
         
         <Button variant="contained" onClick={ handleLogin } > ENTRAR </Button>
