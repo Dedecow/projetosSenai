@@ -1,11 +1,11 @@
 import './App.css'
-import { Login } from './pages/login'
+import { LoginPage } from './pages/login'
 
 function App() {
 
   return (
     <>
-      <Login/>
+      <LoginPage/>
       <p> PRIMEIRO COMMIT - PROJETO DEVINHOUSE - MODULO 1 </p>
     </>
   )

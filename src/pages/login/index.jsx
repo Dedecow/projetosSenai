@@ -1,8 +1,9 @@
-function Login (){
+import { Login } from "../../components/Login";
 
-    return(
-        <p> Pagina de Login </p>
-    )
+
+function LoginPage (){
+
+    return <Login />   
 }
 
-export { Login };
+export { LoginPage };
