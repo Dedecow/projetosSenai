@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      {/* <Header/>
+       <Header/>
       <LoginPage/>
-      <p> PRIMEIRO COMMIT - PROJETO DEVINHOUSE - MODULO 1 </p> */}
+      {/*<p> PRIMEIRO COMMIT - PROJETO DEVINHOUSE - MODULO 1 </p> */}
       {/* <CadastroFarmaciaPage/> */}
       {/* <CadastroDeMedicamentosPage/> */}
       <MapaDeFarmaciasPage/>

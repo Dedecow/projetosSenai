@@ -1,5 +1,6 @@
 
 
+
 function Header (){
     const Cabecalho = ( 
         <header>
@@ -36,7 +37,11 @@ function Header (){
     </header>
     )
     return(
+        <>
+        <img src="../../assets/image/logotipo.jpeg" alt="Logo da Farmácia" />
         <p> Componente Header </p>
+        </>
+        
     )
 }
 export { Header };
