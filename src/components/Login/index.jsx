@@ -1,5 +1,6 @@
 import { Button, TextField } from "@mui/material";
 import { useState } from 'react';
+import logo from '../../assets/image/logotipo.jpeg'
 
 
 function Login (){
@@ -12,7 +13,7 @@ function Login (){
         if (email.trim() === "" || password.trim() === "") {
           setShowError(true);
         } else if (!isValidEmail(email) || !isValidSenha(password)) {
-          console.log("isValidEmail", isValidEmail(email))
+        //   console.log("isValidEmail", isValidEmail(email))
           setShowError(true);
         } else {
           setShowError(false);
@@ -35,12 +36,12 @@ function Login (){
     const isValidSenha = (password) => {
         return password.length >= 8 && /[a-zA-Z]/.test(password) && /\d/.test(password);
     }
-    console.log("showError", showError)
+    // console.log("showError", showError)
 
     return(
         <>  
         <p> Logo da Pagina </p>
-        {/* <img src="../../assets/image/logotipo.jpeg" alt="Logo da Farmácia" />       */}
+        <img src={logo} alt="Logo da Farmácia" />      
         <p> Texto </p>
         
         <TextField 
