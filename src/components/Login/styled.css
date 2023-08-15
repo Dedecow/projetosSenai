@@ -1,10 +1,11 @@
-/* Estilos para a área de login */
+
 .login-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: #2c3e50; 
   }
   
   .login-form {
@@ -14,7 +15,6 @@
     max-width: 400px;
     width: 100%;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
@@ -27,15 +27,15 @@
   }
   
   .login-error {
-    color: red;
+    color: #e74c3c; 
     font-size: 14px;
     text-align: center;
     margin-top: 10px;
   }
   
-  /* Estilos para o botão de entrada */
+
   .login-button {
-    background-color: #007bff;
+    background-color: #c0392b; 
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -45,27 +45,30 @@
   }
   
   .login-button:hover {
-    background-color: #0056b3;
+    background-color: #a93226; 
   }
   
-  /* Estilos para os campos de texto */
+
   .login-input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: #ecf0f1; 
+    color: #34495e; 
   }
   
   .login-input:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+    border-color: #3498db; 
+    box-shadow: 0 0 3px rgba(52, 152, 219, 0.5);
   }
   
-  /* Estilos para o texto abaixo dos campos de entrada */
+
   .login-text {
     font-size: 14px;
     margin-top: 10px;
     text-align: center;
+    color: #95a5a6; 
   }
   
