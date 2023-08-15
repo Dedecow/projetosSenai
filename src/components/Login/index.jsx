@@ -1,6 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import { useState } from 'react';
-import logo from '../../assets/image/logotipo.jpeg'
+import logo from '../../assets/image/logotipo.jpeg';
+import './styled.css';
 
 
 function Login (){
