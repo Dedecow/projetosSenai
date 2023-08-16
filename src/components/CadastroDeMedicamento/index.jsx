@@ -1,6 +1,13 @@
-import { Button, TextField, TextareaAutosize } from "@mui/material";
+import { Button, Select, TextField, TextareaAutosize } from "@mui/material";
 
 function CadastroDeMedicamento (){
+    const [ medicamento, setMedicamento] = useState (" ");
+    const [ laboratorio, setLaboratorio] = useState (" ");
+    const [ dosagem, setDosagem] = useState (" ");
+    // const [ tipo, setTipo] = useState ("Medicamento Comum");
+    // const tipos = ["Medicamento Comum", "Medicamento Controlado"];
+    const [ precoUnitario, setPrecoUnitario] = useState (" ");
+
 
     return (
         <form>
@@ -8,11 +15,22 @@ function CadastroDeMedicamento (){
         <p> Cadastro de Medicamento </p>
 
         <div>
-        <TextField label="Medicamento" variant="outlined" />
-        <TextField label="Laboratório" variant="outlined" />
-        <TextField label="Dosagem" variant="outlined" />
-        <TextField label="Tipo" variant="outlined" />
-        <TextField label="Preço Unitário" variant="outlined" />
+        <TextField label="Medicamento" variant="outlined" required = {true} value={medicamento} onChange={(e) => setMedicamento(e.target.value)} />
+        <TextField label="Laboratório" variant="outlined" required = {true} value={laboratorio} onChange={(e) => setLaboratorio(e.target.value)} />
+        <TextField label="Dosagem" variant="outlined" required = {true} value={dosagem} onChange={(e) => setDosagem(e.target.value)} />
+        <TextField label="Preço Unitário" variant="outlined" required = {true} value={precoUnitario} onChange={(e) => setPrecoUnitario(e.target.value)} />
+        {/* <Select 
+        label="Tipo" 
+        variant="outlined" 
+        required = {true} 
+        value={tipo} 
+        onChange={(e) => setTipo(e.target.value)}>
+            {tipos.map((tipoOption) => (
+            <MenuItem key={tipoOption} value={tipoOption}>
+                {tipoOption}
+            </MenuItem> 
+            ))}
+            </Select> */}
         </div>
         <div>
         <TextareaAutosize label="Descrição " />
