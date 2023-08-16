@@ -1,20 +1,20 @@
 import { Button, Select, TextField, TextareaAutosize } from "@mui/material";
-
+import { SelectTipoMedicamento } from '../SelectTipoMedicamento'
 function CadastroDeMedicamento (){
     const [ medicamento, setMedicamento] = useState (" ");
     const [ laboratorio, setLaboratorio] = useState (" ");
     const [ dosagem, setDosagem] = useState (" ");
-    // const [ tipo, setTipo] = useState ("Medicamento Comum");
+    const [ tipo, setTipo] = useState ("Medicamento Comum");
     // const tipos = ["Medicamento Comum", "Medicamento Controlado"];
     const [ precoUnitario, setPrecoUnitario] = useState (" ");
 
 
     return (
-        <form>
+        <form className = "container">
         
         <p> Cadastro de Medicamento </p>
 
-        <div>
+        <div className="text-field" >
         <TextField label="Medicamento" variant="outlined" required = {true} value={medicamento} onChange={(e) => setMedicamento(e.target.value)} />
         <TextField label="Laboratório" variant="outlined" required = {true} value={laboratorio} onChange={(e) => setLaboratorio(e.target.value)} />
         <TextField label="Dosagem" variant="outlined" required = {true} value={dosagem} onChange={(e) => setDosagem(e.target.value)} />
@@ -31,11 +31,12 @@ function CadastroDeMedicamento (){
             </MenuItem> 
             ))}
             </Select> */}
+        <SelectTipoMedicamento tipo={tipo} setTipo={setTipo} />
         </div>
-        <div>
-        <TextareaAutosize label="Descrição " />
+        <div className ="text-area">
+        <TextareaAutosize label="Descrição do medicamento " />
         </div>
-        <div>
+        <div className="button-container">
         <Button variant="contained"> LIMPAR </Button>
         <Button variant="contained"> SALVAR </Button>
         </div>
