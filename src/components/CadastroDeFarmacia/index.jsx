@@ -1,5 +1,6 @@
 import { Button, TextField } from "@mui/material";
 import { useState } from "react";
+import './styled.css';
 
 function CadastroDeFarmacia (){
     const [ razaoSocial, setRazaoSocial] = useState (" ");
@@ -21,11 +22,11 @@ function CadastroDeFarmacia (){
 
 
     return (
-        <form>
+        <form className="container"> 
         
         <p> Cadastro de Farmácia </p>
 
-        <div>
+        <div className="text-field">
         <TextField label="Razão Social" required = {true} variant="outlined" value={razaoSocial} onChange={(e) => setRazaoSocial(e.target.value)} />
         <TextField label="CNPJ" required = {true} variant="outlined" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
         <TextField label="Nome Fantasia" required = {true} variant="outlined" value={nomeFantasia} onChange={(e) => setNomeFantasia(e.target.value)} />
@@ -33,7 +34,7 @@ function CadastroDeFarmacia (){
         <TextField label="Telefone" required = {true} variant="outlined" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
         <TextField label="Celular" required = {true} variant="outlined" value={celular} onChange={(e) => setCelular(e.target.value)} />
         </div>
-        <div>
+        <div className="text-field">
         <TextField label="CEP" required = {true} variant="outlined" value={cep} onChange={(e) => setCep(e.target.value)} />
         <TextField label="Logradouro" required = {true} variant="outlined" value={logradouro} onChange={(e) => setLogradouro(e.target.value)} />
         <TextField label="Numero" required = {true} variant="outlined" value={numero} onChange={(e) => setNumero(e.target.value)} />
@@ -44,7 +45,7 @@ function CadastroDeFarmacia (){
         <TextField label="Latitude" required = {true} variant="outlined" value={latitude} onChange={(e) => setLatitude(e.target.value)} />
         <TextField label="Longitude" required = {true} variant="outlined" value={longitude} onChange={(e) => setLongitude(e.target.value)} />
         </div>
-        <div>
+        <div className="button-container">
         <Button variant="contained"> LIMPAR </Button>
         <Button variant="contained"> SALVAR </Button>
         </div>

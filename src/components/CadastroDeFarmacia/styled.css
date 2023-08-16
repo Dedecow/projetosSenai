@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #2a2a2a;
+    color: #dcdcdc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.text-field {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
