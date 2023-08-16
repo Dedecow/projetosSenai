@@ -3,7 +3,7 @@ import { Button, TextField, TextareaAutosize } from "@mui/material";
 function CadastroDeMedicamento (){
 
     return (
-        <>
+        <form>
         
         <p> Cadastro de Medicamento </p>
 
@@ -22,7 +22,7 @@ function CadastroDeMedicamento (){
         <Button variant="contained"> SALVAR </Button>
         </div>
         
-        </>
+        </form>
         
 
     )

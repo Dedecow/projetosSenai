@@ -40,7 +40,7 @@ function Login (){
     // console.log("showError", showError)
 
     return(
-        <>  
+        <form>  
         <p> Logo da Pagina </p>
         <img src={logo} alt="Logo da Farmácia" />      
         <p> Texto </p>
@@ -66,7 +66,7 @@ function Login (){
 
         
         <Button variant="contained" onClick={ handleLogin } > ENTRAR </Button>
-        </>
+        </form>
       
     )
 }

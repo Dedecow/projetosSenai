@@ -21,7 +21,7 @@ function CadastroDeFarmacia (){
 
 
     return (
-        <>
+        <form>
         
         <p> Cadastro de Farmácia </p>
 
@@ -49,7 +49,7 @@ function CadastroDeFarmacia (){
         <Button variant="contained"> SALVAR </Button>
         </div>
         
-        </>
+        </form>
         
 
     )
