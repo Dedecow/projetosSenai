@@ -20,8 +20,11 @@ function CadastroDeMedicamento (){
         <TextField label="Medicamento" variant="outlined" required = {true} value={medicamento} onChange={(e) => setMedicamento(e.target.value)} />
         <TextField label="Laboratório" variant="outlined" required = {true} value={laboratorio} onChange={(e) => setLaboratorio(e.target.value)} />
         <TextField label="Dosagem" variant="outlined" required = {true} value={dosagem} onChange={(e) => setDosagem(e.target.value)} />
-        <TextField label="Preço Unitário" variant="outlined" required = {true} value={precoUnitario} onChange={(e) => setPrecoUnitario(e.target.value)} />
-        {/* <Select 
+        <TextField label="Preço Unitário" variant="outlined" required = {true} value={precoUnitario} onChange={(e) => setPrecoUnitario(e.target.value)} /> 
+        </div>
+        
+        <div className="select-container">
+          {/* <Select 
         label="Tipo" 
         variant="outlined" 
         required = {true} 
@@ -33,8 +36,9 @@ function CadastroDeMedicamento (){
             </MenuItem> 
             ))}
             </Select> */}
-        <SelectTipoMedicamento tipo={tipo} setTipo={setTipo} />
+        <SelectTipoMedicamento tipo={tipo} setTipo={setTipo} />  
         </div>
+      
         <div className ="text-area">
         <TextareaAutosize label="Descrição do medicamento " />
         </div>
