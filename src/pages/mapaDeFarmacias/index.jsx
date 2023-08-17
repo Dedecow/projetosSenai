@@ -1,11 +1,11 @@
-import { MapaDeFarmacias } from "../../components/MapaDeFarmácias"
+import { Map } from "../../components/Maps"
 
 function MapaDeFarmaciasPage (){
 
     return(
         <>
         <p> Mapa de Farmacias </p>
-        <MapaDeFarmacias/>
+        <Map/>
         </>
         
     )
