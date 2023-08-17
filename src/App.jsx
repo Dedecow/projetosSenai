@@ -1,19 +1,19 @@
 import './App.css'
-import { Header } from './components/Header'
-// import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
+// import { Header } from './components/Header'
+import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
 // import { CadastroDeMedicamentosPage } from './pages/cadastroDeMedicamentos'
-import { LoginPage } from './pages/login'
+// import { LoginPage } from './pages/login'
 // import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias'
-import { MedicamentosPage } from './pages/medicamentos'
+// import { MedicamentosPage } from './pages/medicamentos'
 
 function App() {
 
   return (
     <>
        {/* <Header/> */}
-      <LoginPage/>
+      {/* <LoginPage/> */}
       {/*<p> PRIMEIRO COMMIT - PROJETO DEVINHOUSE - MODULO 1 </p> */}
-      {/* <CadastroFarmaciaPage/> */}
+      <CadastroFarmaciaPage/>
       {/* <CadastroDeMedicamentosPage/> */}
       {/* <MapaDeFarmaciasPage/> */}
       {/* <MedicamentosPage/> */}
