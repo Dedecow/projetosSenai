@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './styled.css';
 
 function Header() {
   const pages = [

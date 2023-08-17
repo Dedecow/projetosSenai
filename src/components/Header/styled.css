@@ -1,0 +1,34 @@
+body {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  Link {
+    display: block;
+    color: #ff9800;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  Link:hover {
+    color: #e74c3c;
+  }
+  
