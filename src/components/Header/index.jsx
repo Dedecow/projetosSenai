@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HeaderStyled, NavStyled } from "./styled";
 
 function Header() {
   const pages = [
@@ -10,22 +9,23 @@ function Header() {
     },
     {
       route: "/login",
-      description: "Login"
+      description: "Página de Login"
     }
   ];
 
   return (
-    <HeaderStyled>
+    <form className="container">
       <h3>Cabeçalho</h3>
-      <NavStyled>
-        {pages.map(({ route, description }) => (
-          <Link key={route} to={route}>
-            {description}
-          </Link>
-        ))}
-      </NavStyled>
-    </HeaderStyled>
+          {pages.map(({ route, description }) => (
+            <Link key={route} to={route}>
+              {description}
+            </Link>
+          ))}
+    </form>
+
   );
+
+  
 }
 
 export { Header };
