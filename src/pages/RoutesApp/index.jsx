@@ -1,13 +1,20 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { CadastroDeMedicamentosPage } from "../pages/cadastroDeMedicamentos";
-import { LoginPage } from "../pages/login";
+import { CadastroDeMedicamentosPage } from "../cadastroDeMedicamentos";
+import { LoginPage } from "../login";
+import { MedicamentosPage } from "../medicamentos";
+import { MapaDeFarmaciasPage } from "../mapaDeFarmacias"
+
 
 function RoutesApp() {
+
   return (
     <Routes>
-      <Route path="/cadastroMedicamentos" element={<CadastroDeMedicamentosPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/cadastroDeMedicamentos" element={<CadastroDeMedicamentosPage />} />
+      <Route path="/cadastroDeFarmacias" element={<LoginPage />} />
+      <Route path="/medicamentos" element={< MedicamentosPage/>} />
+      <Route path="/mapaDeFarmacias" element={< MapaDeFarmaciasPage />} />
     </Routes>
   );
 }
