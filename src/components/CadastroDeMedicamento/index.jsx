@@ -1,5 +1,6 @@
-import { Button, Select, TextField, TextareaAutosize } from "@mui/material";
+import { Button, TextField, TextareaAutosize } from "@mui/material";
 import { SelectTipoMedicamento } from '../SelectTipoMedicamento';
+import { useState } from 'react';
 import './styled.css';
 
 function CadastroDeMedicamento (){

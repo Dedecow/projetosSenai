@@ -20,6 +20,7 @@ function SelectTipoMedicamento (){
           </FormControl>
         </Form>
         
-    )
+    )}
 }
-export {SelectTipoMedicamento};
+
+export { SelectTipoMedicamento };
