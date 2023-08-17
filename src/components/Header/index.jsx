@@ -1,31 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HeaderStyled, NavStyled } from "./styled";
 
 function Header() {
   const pages = [
     {
       route: "/cadastroMedicamentos",
-      description: "Cadastro de Medicamentos"
+      description: "Página de Cadastro de Medicamentos"
     },
     {
       route: "/login",
-      description: "Login"
+      description: "Página de Login"
+    },
+    {
+      route: "/cadastroDeFarmacias",
+      description: "Página de cadastro das farmácias"
+    },
+    {
+      route: "/medicamentos",
+      description: "Página de Relatório dos ítens cadastrados"
+    },
+    {
+      route: "/mapaDeFarmacias",
+      description: "Página de localização das fármácias cadastradas"
     }
   ];
 
   return (
-    <HeaderStyled>
-      <h3>Cabeçalho</h3>
-      <NavStyled>
-        {pages.map(({ route, description }) => (
-          <Link key={route} to={route}>
-            {description}
-          </Link>
-        ))}
-      </NavStyled>
-    </HeaderStyled>
+    <form className="container">
+      <h3 className="titulo">Cabeçalho</h3>
+          {pages.map(({ route, description }) => (
+            <Link key={route} to={route}>
+              {description}
+            </Link>
+          ))}
+    </form>
+
   );
+
+  
 }
 
 export { Header };
