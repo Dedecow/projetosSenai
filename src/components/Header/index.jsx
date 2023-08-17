@@ -10,15 +10,15 @@ function Header() {
     {
       route: "/login",
       description: "Página de Login"
-    }
+    },
     {
       route: "/cadastroDeFarmacias",
       description: "Página de cadastro das farmácias"
-    }
+    },
     {
       route: "/medicamentos",
       description: "Página de Relatório dos ítens cadastrados"
-    }
+    },
     {
       route: "/mapaDeFarmacias",
       description: "Página de localização das fármácias cadastradas"
