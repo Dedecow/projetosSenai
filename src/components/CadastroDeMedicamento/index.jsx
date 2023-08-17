@@ -41,8 +41,9 @@ function CadastroDeMedicamento (){
         </div>
       
         <div className ="text-area">
-        <TextareaAutosize label="Descrição do medicamento " />
+        <TextareaAutosize label= "Descrição do medicamento " />
         </div>
+        
         <div className="button-container">
         <Button variant="contained"> LIMPAR </Button>
         <Button variant="contained"> SALVAR </Button>
