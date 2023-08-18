@@ -1,10 +1,11 @@
 import './App.css'
 // import { LoginPage } from './pages/login'
-import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
-
-// import { Header } from './components/Header'
 // import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
-// import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias'
+// import { CadastroDeMedicamentosPage } from './pages/cadastroDeMedicamentos'
+
+
+// import { HeaderComponent } from './components/Header'
+import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias'
 // import { MedicamentosPage } from './pages/medicamentos'
 
 function App() {
@@ -12,11 +13,12 @@ function App() {
   return (
     <>
       {/* <LoginPage/> */}
-      <CadastroFarmaciaPage/>
-      
-      {/* <Header/> */}
+      {/* <CadastroFarmaciaPage/> */}
       {/* <CadastroDeMedicamentosPage/> */}
-      {/* <MapaDeFarmaciasPage/> */}
+
+
+      {/* < HeaderComponent/> */}
+      <MapaDeFarmaciasPage/>
       {/* <MedicamentosPage/> */}
     </>
   )

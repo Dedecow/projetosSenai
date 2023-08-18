@@ -3,6 +3,14 @@ import { TileLayer } from 'react-leaflet';
 // import { MapProps } from './interfaces';
 import './styled.css'; 
 
+
+function Map ( ){
+
+    return(
+        <p> Mapa de Farmacias cadastradas </p>
+    )
+
+}
 // function Map({ position, address }: MapProps) {
 //   return (
 //     <div className="map-container">
@@ -20,4 +28,4 @@ import './styled.css';
 //   );
 // }
 
-// export { Map };
+export { Map };

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Header() {
+function HeaderComponent() {
   const pages = [
     {
       route: "/cadastroMedicamentos",
@@ -39,4 +39,4 @@ function Header() {
   
 }
 
-export { Header };
+export { HeaderComponent };
