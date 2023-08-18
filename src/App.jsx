@@ -1,6 +1,6 @@
 import './App.css'
 // import { LoginPage } from './pages/login'
-// import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
+import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
 // import { CadastroDeMedicamentosPage } from './pages/cadastroDeMedicamentos'
 
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       {/* <LoginPage/> */}
-      {/* <CadastroFarmaciaPage/> */}
+      <CadastroFarmaciaPage/>
       {/* <CadastroDeMedicamentosPage/> */}
 
 
