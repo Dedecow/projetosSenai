@@ -1,10 +1,10 @@
 import './styled.css';
-import imagemRemedio from '../../img/imagem-de-remedio.jpeg';
+import ImagemDeRemedio from '../../assets/image/imagem-de-remedio.jpeg';
 
 function Medicamentos() {
     const Remedio = (
         <div className="card-padrao">
-            <imagemRemedio alt="Remédio em caixa com título Devinhouse e a descrição seu uso pode provocar bem estar." className="card-img"/>
+            <ImagemDeRemedio alt="Remédio em caixa com título Devinhouse e a descrição seu uso pode provocar bem estar." className="card-img"/>
             <div className="card-body">
                 <h5 className="card-title">Nome do remédio</h5>
                 <p className="card-text">Descrição do remédio</p>
