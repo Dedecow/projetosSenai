@@ -9,7 +9,6 @@ import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias'
 // import { MedicamentosPage } from './pages/medicamentos'
 
 function App() {
-
   return (
     <>
       {/* <LoginPage/> */}
