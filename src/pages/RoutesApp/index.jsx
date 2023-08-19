@@ -14,7 +14,7 @@ function RoutesApp() {
       <Route path="/cadastroDeMedicamentos" element={<CadastroDeMedicamentosPage />} />
       <Route path="/cadastroDeFarmacias" element={<LoginPage />} />
       <Route path="/medicamentos" element={< MedicamentosPage/>} />
-      <Route path="/mapaDeFarmacias" element={< MapaDeFarmaciasPage />} />
+      <Route path="/map" element={< MapaDeFarmaciasPage />} />
     </Routes>
   );
 }
