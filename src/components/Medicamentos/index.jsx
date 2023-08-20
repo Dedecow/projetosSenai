@@ -57,10 +57,16 @@ function Medicamentos() {
         </div>
     )};
     const ModalDetalhes = (detalhe) =>{
+        console.log(detalhe);
         return(
             <Box sx={style}>
-                <p>Detalhes Medicamentos </p>
-                
+                <h3>Detalhes do Medicamento </h3>
+                <p> nome: {detalhe.detalhe.nome} </p>
+                <p> descricao: {detalhe.detalhe.descricao} </p>
+                <p> laboratorio:{detalhe.detalhe.laboratorio}</p>
+                <p> dosagem: {detalhe.detalhe.dosagem}</p>
+                <p> preço unitario: {detalhe.detalhe.precoUnitario}</p>
+                <p> tipo: {detalhe.detalhe.tipo}</p>
             </Box>
         )
     } 
