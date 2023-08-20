@@ -12,7 +12,12 @@ function Map() {
 function Map ( ){
 
     return(
-        <p> Mapa de Farmacias cadastradas </p>
+      <MapContainer className="map-container"  center={initialCoordinates} zoom={initialZoom} style={{ height: '500px', width: '100%' }}>
+      <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
+      <Marker position={initialCoordinates}>
+        <Popup>Ilha de Florianópolis</Popup>
+      </Marker>
+      </MapContainer>
     )
 
 }
