@@ -11,10 +11,10 @@ function App() {
   return (
     <>
       <NavBar/>
-      <Outlet/>
-      <MedicamentosPage/>
+      {/* <Outlet/> */}
+      {/* <MedicamentosPage/>
       <CadastroFarmaciaPage/>
-      <MapaDeFarmaciasPage/>
+      <MapaDeFarmaciasPage/> */}
       
     </>
   )
