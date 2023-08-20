@@ -8,7 +8,7 @@ import { LoginPage } from "./pages/login";
 // import { CadastroFarmaciaPage } from "./pages/cadastroDeFarmacias";
 import { MapaDeFarmaciasPage } from "./pages/mapaDeFarmacias";
 import App from "./App";
-import { Header } from "./components/Header";
+import { NavBar } from "./components/Header";
 
 
 const router = createBrowserRouter([
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     path: "/", 
     element: <App/>,
     children: [
-    {path:"/", element:<LoginPage />}, {path:"/", element:<Header />},
+    {path:"/", element:<LoginPage />}, {path:"/", element:<NavBar />},
       // {path:"/cadastroDeMedicamentos", element:<CadastroDeMedicamentosPage />},
       // {path:"/cadastroFarmacias", element:<CadastroFarmaciaPage />},
       // {path:"/medicamentos", element:< MedicamentosPage/>},
