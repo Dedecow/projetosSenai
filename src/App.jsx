@@ -4,6 +4,7 @@ import React from 'react';
 import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias';
 import { NavBar } from './components/Header'
 import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
+import { MedicamentosPage } from './pages/medicamentos';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <>
       <NavBar/>
       <Outlet/>
+      <MedicamentosPage/>
       <CadastroFarmaciaPage/>
       <MapaDeFarmaciasPage/>
       
