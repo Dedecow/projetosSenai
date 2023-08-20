@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <NavBar/>
-      {/* <Outlet/>
-      <CadastroFarmaciaPage/> */}
+      <Outlet/>
+      <CadastroFarmaciaPage/>
       
     </>
   )
