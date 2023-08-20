@@ -1,9 +1,14 @@
+import { NavBar } from "../../components/Header";
 import { Medicamentos } from "../../components/Medicamentos";
 
 function MedicamentosPage (){
 
     return(
-       <Medicamentos/>   
+        <>
+          <NavBar/>
+          <Medicamentos/>  
+        </>
+      
         
     )
 };
