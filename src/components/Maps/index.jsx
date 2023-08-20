@@ -12,7 +12,7 @@ function Map() {
     <MapContainer className="map-container"  center={initialCoordinates} zoom={initialZoom} style={{ height: '500px', width: '100%' }}>
       <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
       <Marker position={initialCoordinates}>
-        <Popup>Localização Inicial</Popup>
+        <Popup>Ilha de Florianópolis</Popup>
       </Marker>
     </MapContainer>
   );
