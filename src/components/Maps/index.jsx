@@ -5,7 +5,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 function Map() {
-  const initialCoordinates = [-27.585594, -48.460666];
+  const initialCoordinates = [-26.3015911, -48.845382];
   const initialZoom = 15;
 
     return(
