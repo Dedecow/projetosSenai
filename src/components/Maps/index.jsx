@@ -1,7 +1,12 @@
+// src/Map.js
 import React from 'react';
-import { TileLayer } from 'react-leaflet';
-// import { MapProps } from './interfaces';
-import './styled.css'; 
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+
+function Map() {
+  const initialCoordinates = [-27.585594, -48.460666];
+  const initialZoom = 15;
 
 
 function Map ( ){

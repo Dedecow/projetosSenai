@@ -4,7 +4,7 @@ function CadastroDeMedicamentosPage (){
 
     return(
 
-        <CadastroDeMedicamento/>
+        < CadastroDeMedicamento />
     )
 };
 export { CadastroDeMedicamentosPage };

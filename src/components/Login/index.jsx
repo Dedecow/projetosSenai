@@ -2,6 +2,7 @@ import { Button, TextField } from "@mui/material";
 import { useState } from 'react';
 import logo from '../../assets/image/logotipo.jpeg';
 import './styled.css';
+import { useNavigate } from 'react-router-dom';
 
 
 function Login (){
@@ -9,7 +10,7 @@ function Login (){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showError, setShowError] = useState(false);
-
+    const navigate = useNavigate();
     const handleLogin = () => {
         if (email.trim() === "" || password.trim() === "") {
           setShowError(true);
@@ -18,6 +19,8 @@ function Login (){
           setShowError(true);
         } else {
           setShowError(false);
+          return navigate("/map")
+
         }
     }
     const isValidEmail = (email) => {

@@ -1,5 +1,5 @@
 import './styled.css';
-import ImagemDeRemedio from '../../assets/image/imagem-de-remedio.jpeg';
+// import imagemRemedio from '../../img/imagem-de-remedio.jpeg';
 
 function Medicamentos() {
     const Remedio = (
@@ -23,31 +23,31 @@ function Medicamentos() {
     );
 
     return (
-        <form>
-            <div className="container">
-                <p className="titulo">Listagem de Medicamentos</p>
-                    <div className="listagem">
-                    < Remedio/>
-                    < Remedio/>
-                    < Remedio/>
-                    < Remedio/>
-                    </div>
-                    <div className="listagem">
-                    < Remedio/>
-                    < Remedio/>
-                    < Remedio/>
-                    < Remedio/>
-                    </div>
-                    <div className="listagem">
-                    < Remedio/>
-                    < Remedio/>
-                    < Remedio/>
-                    < Remedio/>
-                    </div>
-            </div>
+        // <div>
+        //     <div className="container">
+        //         <p className="titulo">Listagem de Medicamentos</p>
+        //             <div className="listagem">
+        //             < Remedio/>
+        //             < Remedio/>
+        //             < Remedio/>
+        //             < Remedio/>
+        //             </div>
+        //             <div className="listagem">
+        //             < Remedio/>
+        //             < Remedio/>
+        //             < Remedio/>
+        //             < Remedio/>
+        //             </div>
+        //             <div className="listagem">
+        //             < Remedio/>
+        //             < Remedio/>
+        //             < Remedio/>
+        //             < Remedio/>
+        //             </div>
+        //     </div>
 
-        </form>
-        
+        // </div>
+        <p> medicamento </p>
     );
 }
 
