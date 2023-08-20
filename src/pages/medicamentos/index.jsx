@@ -4,10 +4,10 @@ import { Medicamentos } from "../../components/Medicamentos";
 function MedicamentosPage (){
 
     return(
-        <>
+        <div>
           <NavBar/>
           <Medicamentos/>  
-        </>
+        </div>
       
         
     )

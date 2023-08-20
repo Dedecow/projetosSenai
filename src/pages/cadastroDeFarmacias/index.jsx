@@ -5,11 +5,11 @@ import { NavBar } from "../../components/Header";
 function CadastroFarmaciaPage (){
 
     return(
-        <>
+        <div>
         <NavBar/>
         <CadastroDeFarmacia/>        
 
-        </>
+        </div>
         
     )
 }

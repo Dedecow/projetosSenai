@@ -4,11 +4,14 @@ import { Login } from "../../components/Login";
 
 function LoginPage (){
 
-    return 
-    <>
-    <NavBar/>
-    <Login /> 
-    </>
+    return(
+        <div>
+            <NavBar/>
+            <Login /> 
+        </div>
+
+    )
+    
       
 }
 

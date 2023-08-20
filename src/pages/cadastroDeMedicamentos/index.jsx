@@ -4,10 +4,10 @@ import { NavBar } from "../../components/Header";
 function CadastroDeMedicamentosPage (){
 
     return(
-        <>
+        <div>
         <NavBar/>
         < CadastroDeMedicamento />
-        </>
+        </div>
         
     )
 };

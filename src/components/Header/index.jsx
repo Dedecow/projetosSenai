@@ -1,26 +1,30 @@
 import { Link } from "react-router-dom";
+import './styled.css';
 
 function NavBar() {
-  
-
   return (
-    <nav className="container">
-      <ul>
-        <li className="li"><Link to="/map">Mapa de Farmácias</Link></li>
-        <li className="li"><Link to="/cadastroDeMedicamento">Cadastrar Medicamentos</Link></li>
-        <li className="li"><Link to="/cadastroDeFarmacias">Cadastrar Farmácias</Link></li>
-        <li className="li"><Link to="/medicamentos">Listar Medicamentos</Link></li>
-        <li className="li"><Link to="/Login">Tela Inicial</Link></li>
-      </ul>
-      
-      
-      
-      
-    </nav>
-    
+    <header className="navbar">
+      <nav className="container">
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="/map" className="nav-link">Mapa de Farmácias</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/cadastrar-medicamentos" className="nav-link">Cadastrar Medicamentos</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/cadastrar-farmacias" className="nav-link">Cadastrar Farmácias</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/medicamentos" className="nav-link">Listar Medicamentos</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/login" className="nav-link">Tela Inicial</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
-
-  
 }
 
 export { NavBar };

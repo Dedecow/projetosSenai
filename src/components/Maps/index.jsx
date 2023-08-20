@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-function Map() {
+function Maps() {
   const initialCoordinates = [-26.3015911, -48.845382];
   const initialZoom = 15;
 
@@ -35,4 +35,4 @@ function Map() {
 //   );
 // }
 
-export { Map };
+export { Maps };
