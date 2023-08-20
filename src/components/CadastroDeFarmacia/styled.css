@@ -1,29 +1,40 @@
+/* Estilos para o container principal */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    background-color: #2a2a2a;
-    color: #dcdcdc;
+    background-color: #2a2a2a; /* Preto */
+    color: #dcdcdc; /* Branco */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-.text-field {
+  }
+  
+  /* Estilos para os campos de texto */
+  .text-field {
     margin-bottom: 15px;
     width: 100%;
-}
-
-.button-container {
+    padding: 10px;
+    border: 1px solid #dcdcdc; /* Branco */
+    border-radius: 5px;
+    background-color: #2a2a2a; /* Preto */
+    color: #dcdcdc; /* Branco */
+  }
+  
+  /* Estilos para o contêiner de botões */
+  .button-container {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 10px;
-}
-
-p {
+  }
+  
+  /* Estilos para parágrafos destacados */
+  p {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-}
+    color: #c0392b; /* Vermelho */
+  }
+  
