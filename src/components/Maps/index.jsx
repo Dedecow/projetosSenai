@@ -8,9 +8,6 @@ function Map() {
   const initialCoordinates = [-27.585594, -48.460666];
   const initialZoom = 15;
 
-
-function Map ( ){
-
     return(
       <MapContainer className="map-container"  center={initialCoordinates} zoom={initialZoom} style={{ height: '500px', width: '100%' }}>
       <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
