@@ -7,7 +7,7 @@ function NavBar() {
       <nav className="container">
         <ul className="nav-list">
         <li className="nav-item">
-            <Link to="/login" className="nav-link">Tela Inicial</Link>
+            <Link to="/" className="nav-link">Tela Inicial</Link>
           </li>
           <li className="nav-item">
             <Link to="/cadastrar-medicamentos" className="nav-link">Cadastrar Medicamentos</Link>
