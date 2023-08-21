@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import React from 'react';
-import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias';
-import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
-import { MedicamentosPage } from './pages/medicamentos';
-import { CadastroDeMedicamentosPage } from './pages/cadastroDeMedicamentos';
 import { LoginPage } from './pages/login';
+import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
+import { CadastroDeMedicamentosPage } from './pages/cadastroDeMedicamentos';
+import { MedicamentosPage } from './pages/medicamentos';
+import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias';
 
 
 function App() {
