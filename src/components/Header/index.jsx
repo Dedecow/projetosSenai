@@ -6,8 +6,8 @@ function NavBar() {
     <header className="navbar">
       <nav className="container">
         <ul className="nav-list">
-          <li className="nav-item">
-            <Link to="/map" className="nav-link">Mapa de Farmácias</Link>
+        <li className="nav-item">
+            <Link to="/login" className="nav-link">Tela Inicial</Link>
           </li>
           <li className="nav-item">
             <Link to="/cadastrar-medicamentos" className="nav-link">Cadastrar Medicamentos</Link>
@@ -19,7 +19,7 @@ function NavBar() {
             <Link to="/medicamentos" className="nav-link">Listar Medicamentos</Link>
           </li>
           <li className="nav-item">
-            <Link to="/login" className="nav-link">Tela Inicial</Link>
+            <Link to="/map" className="nav-link">Mapa de Farmácias</Link>
           </li>
         </ul>
       </nav>
