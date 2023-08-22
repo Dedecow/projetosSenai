@@ -8,6 +8,8 @@ import App from "./App";
 import { CadastroDeMedicamentosPage } from "./pages/cadastroDeMedicamentos";
 import { CadastroFarmaciaPage } from "./pages/cadastroDeFarmacias";
 import { MedicamentosPage } from "./pages/medicamentos";
+import { Maps } from "./components/Maps"
+
 
 
 // const router = createBrowserRouter([

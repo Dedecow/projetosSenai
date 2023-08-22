@@ -9,13 +9,20 @@ function Maps() {
   const initialZoom = 15;
 
     return(
-      <MapContainer className="map-container"  center={initialCoordinates} zoom={initialZoom} style={{ height: '500px', width: '100%' }}>
+      <MapContainer 
+      className="map-container"  
+      center={initialCoordinates} 
+      zoom={initialZoom} 
+      style={{ 
+        height: '500px', 
+        width: '100%' 
+      }}>
       <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
       <Marker position={initialCoordinates}>
         <Popup>Ilha de Florianópolis</Popup>
       </Marker>
       </MapContainer>
-    )
+    );
 
 }
 // function Map({ position, address }: MapProps) {
