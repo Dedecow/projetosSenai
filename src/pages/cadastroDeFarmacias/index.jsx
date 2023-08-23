@@ -6,6 +6,7 @@ function CadastroFarmaciaPage (){
 
     return(
         <div>
+        <NavBar/>
         <CadastroDeFarmacia/>        
         </div>
         
