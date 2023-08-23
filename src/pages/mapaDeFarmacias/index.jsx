@@ -4,10 +4,10 @@ import { Maps } from "../../components/Maps";
 function MapaDeFarmaciasPage (){
 
     return(
-        <>
+        <form>
         <NavBar/>
         <Maps/>
-        </>
+        </form>
         
     );
 }
