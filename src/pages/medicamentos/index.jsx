@@ -5,7 +5,6 @@ function MedicamentosPage (){
 
     return(
         <div>
-          <NavBar/>
           <Medicamentos/>  
         </div>
       

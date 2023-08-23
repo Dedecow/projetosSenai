@@ -5,7 +5,6 @@ function CadastroDeMedicamentosPage (){
 
     return(
         <div>
-        <NavBar/>
         < CadastroDeMedicamento />
         </div>
         

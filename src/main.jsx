@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import { LoginPage } from "./pages/login";
-import { MapaDeFarmaciasPage } from "./pages/mapaDeFarmacias";
+// import {createBrowserRouter, RouterProvider} from "react-router-dom";
+// import { LoginPage } from "./pages/login";
+// import { MapaDeFarmaciasPage } from "./pages/mapaDeFarmacias";
 import App from "./App";
-import { CadastroDeMedicamentosPage } from "./pages/cadastroDeMedicamentos";
-import { CadastroFarmaciaPage } from "./pages/cadastroDeFarmacias";
-import { MedicamentosPage } from "./pages/medicamentos";
+// import { CadastroDeMedicamentosPage } from "./pages/cadastroDeMedicamentos";
+// import { CadastroFarmaciaPage } from "./pages/cadastroDeFarmacias";
+// import { MedicamentosPage } from "./pages/medicamentos";
 
 
 // const router = createBrowserRouter([
