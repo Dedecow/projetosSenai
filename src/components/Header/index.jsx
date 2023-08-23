@@ -4,7 +4,7 @@ import './styled.css';
 function NavBar() {
   return (
     <header className="navbar">
-      <nav className="container">
+      <nav className="navbar">
         <ul className="nav-list">
         <li className="nav-item">
             <Link to="/" className="nav-link">Tela Inicial</Link>
