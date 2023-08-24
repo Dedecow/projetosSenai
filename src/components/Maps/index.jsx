@@ -1,18 +1,51 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React, { useEffect } from 'react';
+import L from 'leaflet';
+import './styled.css';
 
-function Maps() {
-  const initialCoordinates = [-27.585594, -48.460666];
-  const initialZoom = 15;
+
+
+function MapComponent() {
+  let h2 = document.querySelector('h2');
+  var map;
+
+  const success = (pos) => {
+    console.log(pos.coords.latitude, pos.coords.longitude);
+    h2.textContent = `Latitude: ${pos.coords.latitude}, Longitude: ${pos.coords.longitude}`;
+
+    if (map === undefined) {
+      map = L.map('mapid').setView([pos.coords.latitude, pos.coords.longitude], 13);
+    } else {
+      map.remove();
+      map = L.map('mapid').setView([pos.coords.latitude, pos.coords.longitude], 13);
+    }
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([pos.coords.latitude, pos.coords.longitude]).addTo(map)
+      .bindPopup('Eu estou aqui!')
+      .openPopup();
+  }
+
+  const error = (err) => {
+    console.log(err);
+  }
+
+  useEffect(() => {
+    const watchID = navigator.geolocation.watchPosition(success, error, {
+      enableHighAccuracy: true,
+      timeout: 5000
+    });
+
+    return () => {
+      navigator.geolocation.clearWatch(watchID);
+    }
+  }, []);
 
   return (
-    <MapContainer center={initialCoordinates} zoom={initialZoom} style={{ height: '500px', width: '100%' }}>
-      <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
-      <Marker position={initialCoordinates}>
-        <Popup>Ilha de Florianópolis</Popup>
-      </Marker>
-    </MapContainer>
+    <div id="mapid" style={{ height: '300px', width: '50%' }}></div>
   );
 }
 
-export {Maps};
+export default MapComponent;

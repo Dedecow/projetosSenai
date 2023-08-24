@@ -1,12 +1,12 @@
 import { NavBar } from "../../components/Header";
-import { Maps } from "../../components/Maps";
+import { MapComponent } from "../../components/Maps";
 
 function MapaDeFarmaciasPage (){
 
     return(
         <form>
         <NavBar/>
-        <Maps/>
+        <MapComponent/>
         </form>
         
     );
