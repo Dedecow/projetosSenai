@@ -44,7 +44,7 @@ function Login (){
 
     return(
         <form>  
-        <p> Medicaion Management - Mais que farmácia, um centro de saúde. </p>
+        <p> Medication Management - Mais que farmácia, um centro de saúde. </p>
         <img className="logo" src={logo} alt="Logo da Farmácia" />      
         <p> Seja Bem Vindo, faça seu login para continuar </p>
         
