@@ -48,4 +48,4 @@ function MapComponent() {
   );
 }
 
-export default MapComponent;
+export {MapComponent};

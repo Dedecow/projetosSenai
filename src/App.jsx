@@ -6,12 +6,13 @@ import { LoginPage } from './pages/login';
 import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
 import { CadastroDeMedicamentosPage } from './pages/cadastroDeMedicamentos';
 import { MedicamentosPage } from './pages/medicamentos';
-import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias';
-import { Maps } from './components/Maps';
-import MapComponent from './MapComponent'; // Importando o componente MapComponent
+// import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias';
+// import { Maps } from './components/Maps';
+import { MapComponent } from './components/Maps';
 
 function App() {
   return (
+    <>
     <div>
       <Router>
         <Routes>
@@ -19,12 +20,16 @@ function App() {
           <Route path="/medicamentos" element={<MedicamentosPage />} />
           <Route path="/cadastrar-medicamentos" element={<CadastroDeMedicamentosPage />} />
           <Route path="/cadastrar-farmacias" element={<CadastroFarmaciaPage />} />
-          <Route path="/map" element={<MapaDeFarmaciasPage />} />
+          {/* <Route path="/map" element={<MapaDeFarmaciasPage />} /> */}
         </Routes>
       </Router>
-      
-      <MapComponent /> 
-    </div>
+
+    </div>   
+
+        <MapComponent /> 
+    
+    </>
+
   );
 }
 
