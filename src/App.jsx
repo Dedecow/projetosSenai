@@ -20,10 +20,9 @@ function App() {
           <Route path="/medicamentos" element={<MedicamentosPage />} />
           <Route path="/cadastrar-medicamentos" element={<CadastroDeMedicamentosPage />} />
           <Route path="/cadastrar-farmacias" element={<CadastroFarmaciaPage />} />
-          {/* <Route path="/map" element={<MapaDeFarmaciasPage />} /> */}
+          <Route path="/map" element={<MapaDeFarmaciasPage />} />
         </Routes>
       </Router>
-
     </div>   
 
         <MapComponent /> 
