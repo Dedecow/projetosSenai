@@ -7,12 +7,12 @@ import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
 import { CadastroDeMedicamentosPage } from './pages/cadastroDeMedicamentos';
 import { MedicamentosPage } from './pages/medicamentos';
 import { MapaDeFarmaciasPage } from './pages/mapaDeFarmacias';
+import { Maps } from './components/Maps';
 
 
 function App() {
   return (
     <div>
-
       <Router>
           <Routes>
             <Route path="/" element={<LoginPage/>}/>
