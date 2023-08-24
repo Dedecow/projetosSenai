@@ -1,7 +1,6 @@
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import React from 'react';
-import { NavBar } from './components/Header'
 import { LoginPage } from './pages/login';
 import { CadastroFarmaciaPage } from './pages/cadastroDeFarmacias'
 import { CadastroDeMedicamentosPage } from './pages/cadastroDeMedicamentos';
