@@ -44,19 +44,26 @@ function CadastroDeFarmacia (){
     const handleSubmit = (e) => {
         e.preventDefault();console.log(lista);setLista([...lista, farmacias])
     };
-    // const getDados = async(e)=> {
-    //     try {
-    //         const response = await axios.get(
-    //          `http://viacep.com.br/ws/${cep}/json/`
-    //         )
-    //     console.log(response);
-    //     } catch (error) { 
-    //         console.log(error)
-    //     }
-    //     // fetch(`viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data => {
-    //     //     console.log(data);
-    //     //     })
-    // }
+
+
+     
+     async function pegarCep () {
+        await fetch (`http://viacep.com.br/ws/${farmacias.cep}/json/`)
+        .then(resposta => resposta.json() )
+        .then (dados => {
+            setFarmacias({
+                ...farmacias,
+                bairro: dados.bairro,
+                logradouro: dados.logradouro,
+                cidade: dados.localidade,
+                estado: dados.uf
+
+            });
+            console.log(dados)
+        })   
+
+       
+     }
 
 
     return (
@@ -85,7 +92,7 @@ function CadastroDeFarmacia (){
             </div>
             <div className="button-container">
             <Button variant="contained"> LIMPAR </Button>
-            <Button type="submit" variant="contained"> SALVAR </Button>
+            <Button onClick={pegarCep} type="submit" variant="contained"> SALVAR </Button>
             </div>
         </form>
         
