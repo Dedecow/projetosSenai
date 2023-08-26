@@ -26,7 +26,6 @@ function CadastroDeFarmacia (){
         longitude: ''
     });
     const [lista, setLista] = useState([]);
-    // carregar a lista de farmacia
     useEffect(() => {
         if(localStorage.getItem('lista_farmacias') !== null) {
             setLista(JSON.parse(localStorage.getItem('lista_farmacias')))
