@@ -5,8 +5,8 @@ import './styled.css';
 function CoordinatesDisplay({ latitude, longitude }) {
     return (
         <div>
-            <p>Latitude: {latitude}</p>
-            <p>Longitude: {longitude}</p>
+            {/* <p>Latitude: {latitude}</p>
+            <p>Longitude: {longitude}</p> */}
         </div>
     );
 }
