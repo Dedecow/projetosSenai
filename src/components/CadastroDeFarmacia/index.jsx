@@ -94,8 +94,9 @@ function CadastroDeFarmacia (){
             <div className="latitude-longitude-container">
             <TextField label="Latitude" required variant="outlined" name="latitude" value={farmacias.latitude} onChange={handleChange} />
             <TextField label="Longitude" required variant="outlined" name="longitude" value={farmacias.longitude} onChange={handleChange} />
-            <Button className="current-location-button" variant="contained" onClick={PuxarCoordenadas}>Puxar Coordenadas Atuais</Button>
-            </div> 
+            <PuxarCoordenadas />
+            </div>
+ 
 
             </div>
             <div className="button-container">

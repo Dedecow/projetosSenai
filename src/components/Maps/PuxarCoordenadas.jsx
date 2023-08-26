@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 function PuxarCoordenadas () {
     const [userLocation, setUserLocation] = useState({ lat: 0, lng: 0 });
 
@@ -14,16 +16,15 @@ function PuxarCoordenadas () {
               }
             );
           } else {
-            console.error('Tentativa de pegar as coordenadas.');
+            console.error('Não foi possível obter as coordenadas.');
           }
         };
-        console.log("Coordenadas",getUserLocation);
         getUserLocation();
-      }, []);
+    }, []);
 
-    return(
-            <p> Puxando coordenadas </p>
+    return (
+        <p>Latitude: {userLocation.lat}, Longitude: {userLocation.lng}</p>
     );
 }
 
-export {PuxarCoordenadas}
+export { PuxarCoordenadas };

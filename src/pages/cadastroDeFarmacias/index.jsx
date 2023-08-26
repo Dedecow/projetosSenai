@@ -1,5 +1,6 @@
 import { CadastroDeFarmacia } from "../../components/CadastroDeFarmacia";
 import { NavBar } from "../../components/Header";
+import { PuxarCoordenadas } from "../../components/Maps/PuxarCoordenadas";
 
 
 function CadastroFarmaciaPage (){
@@ -7,7 +8,8 @@ function CadastroFarmaciaPage (){
     return(
         <div>
         <NavBar/>
-        <CadastroDeFarmacia/>        
+        <CadastroDeFarmacia/>
+        <PuxarCoordenadas/>       
         </div>
         
     )
