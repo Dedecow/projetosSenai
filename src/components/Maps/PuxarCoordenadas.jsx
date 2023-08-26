@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+function CoordinatesDisplay({ latitude, longitude }) {
+    return (
+        <div>
+            <p>Latitude: {latitude}</p>
+            <p>Longitude: {longitude}</p>
+        </div>
+    );
+}
+
 function PuxarCoordenadas({ onUpdateCoords }) {
     const [userLocation, setUserLocation] = useState({ lat: 0, lng: 0 });
 
@@ -25,7 +34,10 @@ function PuxarCoordenadas({ onUpdateCoords }) {
     }, [onUpdateCoords]);
 
     return (
-        <p>Latitude: {userLocation.lat}, Longitude: {userLocation.lng}</p>
+        <CoordinatesDisplay
+            latitude={userLocation.lat}
+            longitude={userLocation.lng}
+        />
     );
 }
 
