@@ -25,6 +25,17 @@ function CadastroDeFarmacia (){
         latitude: '',
         longitude: ''
     });
+
+    const atualizarCoordenadas = (lat, lng) => {
+        setFarmacias({
+            ...farmacias,
+            coordenadas: {
+                latitude: lat,
+                longitude: lng
+            }
+        });
+    };
+    
     const [lista, setLista] = useState([]);
     // carregar a lista de farmacia
     useEffect(() => {

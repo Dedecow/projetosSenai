@@ -118,4 +118,15 @@
   background-color: #0056b3;
 }
 
+.latitude-longitude-container {
+  display: flex;
+  flex-direction: column; /* Alinhe os campos verticalmente */
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.latitude-longitude-container .text-field {
+  grid-template-columns: 1fr; /* Apenas uma coluna */
+}
+
   
