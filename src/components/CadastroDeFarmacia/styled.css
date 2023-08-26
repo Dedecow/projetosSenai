@@ -90,4 +90,32 @@
   .button-container Button:hover {
     background-color: #0056b3;
   }
+
+.latitude-longitude-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+
+.latitude-longitude-container .MuiTextField-root {
+  flex: 1;
+}
+
+.current-location-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+.current-location-button:hover {
+  background-color: #0056b3;
+}
+
   

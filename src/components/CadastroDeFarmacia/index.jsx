@@ -1,6 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import './styled.css';
+import { PuxarCoordenadas } from "../Maps/PuxarCoordenadas";
 // import axios from "axios";
 
 function CadastroDeFarmacia (){
@@ -90,8 +91,12 @@ function CadastroDeFarmacia (){
             <TextField label="Cidade" required = {true} variant="outlined" name="cidade" value={farmacias.cidade} onChange={handleChange} />
             <TextField label="Estado" required = {true} variant="outlined" name="estado" value={farmacias.estado} onChange={handleChange} />
             <TextField label="Complemento" required = {false} variant="outlined" name="complemento" value={farmacias.complemento} onChange={handleChange} />
-            <TextField label="Latitude" required = {true} variant="outlined" name="latitude" value={farmacias.latitude} onChange={handleChange} />
-            <TextField label="Longitude" required = {true} variant="outlined" name="longitude" value={farmacias.longitude} onChange={handleChange} />
+            <div className="latitude-longitude-container">
+            <TextField label="Latitude" required variant="outlined" name="latitude" value={farmacias.latitude} onChange={handleChange} />
+            <TextField label="Longitude" required variant="outlined" name="longitude" value={farmacias.longitude} onChange={handleChange} />
+            <Button className="current-location-button" variant="contained" onClick={PuxarCoordenadas}>Puxar Coordenadas Atuais</Button>
+            </div> 
+
             </div>
             <div className="button-container">
             <Button variant="contained"> LIMPAR </Button>
