@@ -80,13 +80,16 @@ function CadastroDeFarmacia (){
             <TextField label="Celular" required = {true} variant="outlined" name="celular" value={farmacias.celular} onChange={handleChange} />
             </div>
             <div className="text-field">
-            <TextField label="CEP" required = {true} variant="outlined" name="cep" value={farmacias.cep} onChange={handleChange} />
+            <div className="buscar-cep-container">
+             <TextField className="buscar-cep-imput" label="CEP" required = {true} variant="outlined" name="cep" value={farmacias.cep} onChange={handleChange} /> 
+             <Button className="buscar-cep-button" variant="contained" onClick={pegarCep}>Buscar CEP</Button>  
+            </div>
             <TextField label="Logradouro" required = {true} variant="outlined" name="logradouro" value={farmacias.logradouro} onChange={handleChange} />
             <TextField label="Numero" required = {true} variant="outlined" name="numero" value={farmacias.numero} onChange={handleChange} />
             <TextField label="Bairro" required = {true} variant="outlined" name="bairro" value={farmacias.bairro} onChange={handleChange} />
             <TextField label="Cidade" required = {true} variant="outlined" name="cidade" value={farmacias.cidade} onChange={handleChange} />
             <TextField label="Estado" required = {true} variant="outlined" name="estado" value={farmacias.estado} onChange={handleChange} />
-            <TextField label="Complemento" required = {true} variant="outlined" name="complemento" value={farmacias.complemento} onChange={handleChange} />
+            <TextField label="Complemento" required = {false} variant="outlined" name="complemento" value={farmacias.complemento} onChange={handleChange} />
             <TextField label="Latitude" required = {true} variant="outlined" name="latitude" value={farmacias.latitude} onChange={handleChange} />
             <TextField label="Longitude" required = {true} variant="outlined" name="longitude" value={farmacias.longitude} onChange={handleChange} />
             </div>

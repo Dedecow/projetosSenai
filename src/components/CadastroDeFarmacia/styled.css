@@ -1,40 +1,93 @@
-/* Estilos para o container principal */
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    background-color: #2a2a2a; /* Preto */
-    color: #dcdcdc; /* Branco */
+    background-color: #2a2a2a;
+    color: #dcdcdc; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
-  
-  /* Estilos para os campos de texto */
+
   .text-field {
     margin-bottom: 15px;
     width: 100%;
     padding: 10px;
-    border: 1px solid #dcdcdc; /* Branco */
+    border: 1px solid #dcdcdc; 
     border-radius: 5px;
-    background-color: #2a2a2a; /* Preto */
-    color: #dcdcdc; /* Branco */
+    background-color: #2a2a2a; 
+    color: #dcdcdc; 
   }
   
-  /* Estilos para o contêiner de botões */
   .button-container {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 10px;
   }
-  
-  /* Estilos para parágrafos destacados */
+
   p {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #c0392b; /* Vermelho */
+    color: #c0392b; 
+  }
+  
+  .text-field {
+    margin-bottom: 20px;
+  }
+  
+  .buscar-cep-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1c1c1c;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .buscar-cep-input {
+    flex: 1;
+    background-color: #2c2c2c;
+    border: 1px solid #555;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .buscar-cep-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .buscar-cep-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button-container Button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button-container Button:hover {
+    background-color: #0056b3;
   }
   
