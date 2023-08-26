@@ -1,40 +1,30 @@
 import { Link } from "react-router-dom";
+import './styled.css';
 
 function NavBar() {
-  // const pages = [
-  //   {
-  //     route: "/cadastroMedicamentos",
-  //     description: "Página de Cadastro de Medicamentos"
-  //   },
-  //   {
-  //     route: "/login",
-  //     description: "Página de Login"
-  //   },
-  //   {
-  //     route: "/cadastroDeFarmacias",
-  //     description: "Página de cadastro das farmácias"
-  //   },
-  //   {
-  //     route: "/medicamentos",
-  //     description: "Página de Relatório dos ítens cadastrados"
-  //   },
-  //   {
-  //     route: "/mapaDeFarmacias",
-  //     description: "Página de localização das fármácias cadastradas"
-  //   }
-  // ];
-
   return (
-    <nav >
-      <Link to="/map"></Link>
-      <Link to="/cadastroDeMedicamento"></Link>
-      <Link to="/cadastroDeFarmacias"></Link>
-      <Link to="/medicamentos"></Link>
-    </nav>
-    
+    <header className="navbar">
+      <nav className="navbar">
+        <ul className="nav-list">
+        <li className="nav-item">
+            <Link to="/" className="nav-link">Tela Inicial</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/cadastrar-medicamentos" className="nav-link">Cadastrar Medicamentos</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/cadastrar-farmacias" className="nav-link">Cadastrar Farmácias</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/medicamentos" className="nav-link">Listar Medicamentos</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/map" className="nav-link">Mapa de Farmácias</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
-
-  
 }
 
 export { NavBar };

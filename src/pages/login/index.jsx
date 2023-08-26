@@ -1,9 +1,18 @@
+import { NavBar } from "../../components/Header";
 import { Login } from "../../components/Login";
 
 
 function LoginPage (){
 
-    return <Login />   
+    return(
+        <div>
+            <NavBar/>
+            <Login /> 
+        </div>
+
+    )
+    
+      
 }
 
 export { LoginPage };

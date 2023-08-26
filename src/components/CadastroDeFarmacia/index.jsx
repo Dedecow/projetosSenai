@@ -1,6 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import './styled.css';
+import { PuxarCoordenadas } from "../Maps/PuxarCoordenadas";
 // import axios from "axios";
 
 function CadastroDeFarmacia (){
@@ -44,19 +45,26 @@ function CadastroDeFarmacia (){
     const handleSubmit = (e) => {
         e.preventDefault();console.log(lista);setLista([...lista, farmacias])
     };
-    // const getDados = async(e)=> {
-    //     try {
-    //         const response = await axios.get(
-    //          `http://viacep.com.br/ws/${cep}/json/`
-    //         )
-    //     console.log(response);
-    //     } catch (error) { 
-    //         console.log(error)
-    //     }
-    //     // fetch(`viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data => {
-    //     //     console.log(data);
-    //     //     })
-    // }
+
+
+     
+     async function pegarCep () {
+        await fetch (`http://viacep.com.br/ws/${farmacias.cep}/json/`)
+        .then(resposta => resposta.json() )
+        .then (dados => {
+            setFarmacias({
+                ...farmacias,
+                bairro: dados.bairro,
+                logradouro: dados.logradouro,
+                cidade: dados.localidade,
+                estado: dados.uf
+
+            });
+            console.log(dados)
+        })   
+
+       
+     }
 
 
     return (
@@ -73,19 +81,26 @@ function CadastroDeFarmacia (){
             <TextField label="Celular" required = {true} variant="outlined" name="celular" value={farmacias.celular} onChange={handleChange} />
             </div>
             <div className="text-field">
-            <TextField label="CEP" required = {true} variant="outlined" name="cep" value={farmacias.cep} onChange={handleChange} />
+            <div className="buscar-cep-container">
+             <TextField className="buscar-cep-imput" label="CEP" required = {true} variant="outlined" name="cep" value={farmacias.cep} onChange={handleChange} /> 
+             <Button className="buscar-cep-button" variant="contained" onClick={pegarCep}>Buscar CEP</Button>  
+            </div>
             <TextField label="Logradouro" required = {true} variant="outlined" name="logradouro" value={farmacias.logradouro} onChange={handleChange} />
             <TextField label="Numero" required = {true} variant="outlined" name="numero" value={farmacias.numero} onChange={handleChange} />
             <TextField label="Bairro" required = {true} variant="outlined" name="bairro" value={farmacias.bairro} onChange={handleChange} />
             <TextField label="Cidade" required = {true} variant="outlined" name="cidade" value={farmacias.cidade} onChange={handleChange} />
             <TextField label="Estado" required = {true} variant="outlined" name="estado" value={farmacias.estado} onChange={handleChange} />
-            <TextField label="Complemento" required = {true} variant="outlined" name="complemento" value={farmacias.complemento} onChange={handleChange} />
-            <TextField label="Latitude" required = {true} variant="outlined" name="latitude" value={farmacias.latitude} onChange={handleChange} />
-            <TextField label="Longitude" required = {true} variant="outlined" name="longitude" value={farmacias.longitude} onChange={handleChange} />
+            <TextField label="Complemento" required = {false} variant="outlined" name="complemento" value={farmacias.complemento} onChange={handleChange} />
+            <div className="latitude-longitude-container">
+            <TextField label="Latitude" required variant="outlined" name="latitude" value={farmacias.latitude} onChange={handleChange} />
+            <TextField label="Longitude" required variant="outlined" name="longitude" value={farmacias.longitude} onChange={handleChange} />
+            <Button className="current-location-button" variant="contained" onClick={PuxarCoordenadas}>Puxar Coordenadas Atuais</Button>
+            </div> 
+
             </div>
             <div className="button-container">
             <Button variant="contained"> LIMPAR </Button>
-            <Button type="submit" variant="contained"> SALVAR </Button>
+            <Button onClick={pegarCep} type="submit" variant="contained"> SALVAR </Button>
             </div>
         </form>
         
