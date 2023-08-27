@@ -62,7 +62,46 @@ function CadastroDeFarmacia (){
 
             });
             console.log(dados)
-        })   
+        })  
+        function CoordinatesDisplay({ latitude, longitude }) {
+            return (
+                <div>
+                    {/* <p>Latitude: {latitude}</p>
+                    <p>Longitude: {longitude}</p> */}
+                </div>
+            );
+        }
+        
+        function PuxarCoordenadas({ onUpdateCoords }) {
+            const [userLocation, setUserLocation] = useState({ lat: 0, lng: 0 });
+        
+            useEffect(() => {
+                const getUserLocation = () => {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(
+                            position => {
+                                const { latitude, longitude } = position.coords;
+                                setUserLocation({ lat: latitude, lng: longitude });
+                                onUpdateCoords(latitude, longitude);
+                            },
+                            error => {
+                                console.error(error);
+                            }
+                        );
+                    } else {
+                        console.error('Não foi possível obter as coordenadas.');
+                    }
+                };
+                getUserLocation();
+            }, [onUpdateCoords]);
+        
+            return (
+                <CoordinatesDisplay
+                    latitude={userLocation.lat}
+                    longitude={userLocation.lng}
+                />
+            );
+        } 
 
        
      }
@@ -95,7 +134,7 @@ function CadastroDeFarmacia (){
             <div className="latitude-longitude-container">
             <TextField label="Latitude" required variant="outlined" name="latitude" value={farmacias.latitude} onChange={handleChange} />
             <TextField label="Longitude" required variant="outlined" name="longitude" value={farmacias.longitude} onChange={handleChange} />
-{/*                         
+            {/*                         
             <PuxarCoordenadas onUpdateCoords={atualizarCoordenadas} /> */}
             <Button className="current-location-button" variant="contained" onClick={PuxarCoordenadas}>Puxar Coordenadas Atuais</Button>
             </div> 
