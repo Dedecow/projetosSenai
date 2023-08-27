@@ -7,7 +7,6 @@ import { PuxarCoordenadas } from "../Maps/PuxarCoordenadas";
 
 function CadastroDeFarmacia (){
 
-    // const [ dados, setDados] = useState ([]);
 
     const [farmacias, setFarmacias] = useState({
         razaoSocial: '',
@@ -27,7 +26,6 @@ function CadastroDeFarmacia (){
         longitude: ''
     });
     const [lista, setLista] = useState([]);
-    // carregar a lista de farmacia
     useEffect(() => {
         if(localStorage.getItem('lista_farmacias') !== null) {
             setLista(JSON.parse(localStorage.getItem('lista_farmacias')))
@@ -72,6 +70,15 @@ function CadastroDeFarmacia (){
             );
         }
         
+        function CoordinatesDisplay({ latitude, longitude }) {
+            return (
+                <div>
+                    {/* <p>Latitude: {latitude}</p>
+                    <p>Longitude: {longitude}</p> */}
+                </div>
+            );
+        }
+        
         function PuxarCoordenadas({ onUpdateCoords }) {
             const [userLocation, setUserLocation] = useState({ lat: 0, lng: 0 });
         
@@ -101,7 +108,17 @@ function CadastroDeFarmacia (){
                     longitude={userLocation.lng}
                 />
             );
-        } 
+        }
+        const atualizarCoordenadas = (lat, lng) => {
+            setFarmacias({
+                ...farmacias,
+                coordenadas: {
+                    ...farmacias.coordenadas,
+                    latitude: lat,
+                    longitude: lng
+                }
+            });
+        };
 
        
      }
@@ -134,8 +151,8 @@ function CadastroDeFarmacia (){
             <div className="latitude-longitude-container">
             <TextField label="Latitude" required variant="outlined" name="latitude" value={farmacias.latitude} onChange={handleChange} />
             <TextField label="Longitude" required variant="outlined" name="longitude" value={farmacias.longitude} onChange={handleChange} />
-{/*                                     
-            <PuxarCoordenadas onUpdateCoords={atualizarCoordenadas} /> */}
+                                    
+            {/* <PuxarCoordenadas onUpdateCoords={atualizarCoordenadas} /> */}
             <Button className="current-location-button" variant="contained" onClick={()=>PuxarCoordenadas()}>Puxar Coordenadas Atuais</Button>
             </div> 
 
