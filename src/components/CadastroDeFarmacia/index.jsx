@@ -119,19 +119,7 @@ function CadastroDeFarmacia (){
                 />
             );
         }
-        // const atualizarCoordenadas = (lat, lng) => {
-        //     setFarmacias({
-        //         ...farmacias,
-        //         coordenadas: {
-        //             ...farmacias.coordenadas,
-        //             latitude: lat,
-        //             longitude: lng
-        //         }
-        //     });
-        // };
 
-       
-     }
 
 
      return (
