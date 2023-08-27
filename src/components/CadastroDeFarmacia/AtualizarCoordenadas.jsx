@@ -94,7 +94,7 @@ function AtualizarCoordenadas (){
         });        
     }
     return(
-        <form className="container-2" onSubmit={handleSubmit}>
+        <div className="container-2" onSubmit={handleSubmit}>
             <div className="text-field">
                 <div className="latitude-longitude-container">
                 <TextField
@@ -117,7 +117,7 @@ function AtualizarCoordenadas (){
                     <Button className="current-location-button" variant="contained" onClick={PuxarCoordenadas}>Inserir Coordenadas Manualmente</Button>
                 </div> 
             </div> 
-        </form>
+        </div>
     );
 }
 

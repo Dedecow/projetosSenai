@@ -2,6 +2,8 @@ import { Button, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import './styled.css';
 import { PuxarCoordenadas } from "../Maps/PuxarCoordenadas";
+import { PegarCepCadastro } from "./PegarCepCadastro";
+import { AtualizarCoordenadas } from "./AtualizarCoordenadas";
 // import axios from "axios";
 
   
@@ -133,10 +135,14 @@ function CadastroDeFarmacia (){
             value={farmacias.celular} 
             onChange={handleChange} />
             </div>
+            <PegarCepCadastro/>
+            <AtualizarCoordenadas/>
+
             <div className="button-container">
             <Button variant="contained"> LIMPAR </Button>
             <Button onClick={handleSubmit} type="submit" variant="contained"> SALVAR </Button>
             </div>
+            
         </form>
     )
 };
