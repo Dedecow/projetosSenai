@@ -1,3 +1,7 @@
+import { Button, TextField } from "@mui/material";
+import { useEffect, useState } from "react";
+import './styled.css';
+
 function PegarCepCadastro () {
      
     const [farmacias, setFarmacias] = useState({
@@ -35,7 +39,7 @@ function PegarCepCadastro () {
         setFarmacias({...farmacias, [name]: value});
     };
 
-    const HandleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();console.log(lista);setLista([...lista, farmacias])
     };
 

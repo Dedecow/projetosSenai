@@ -1,4 +1,48 @@
+import { Button, TextField } from "@mui/material";
+import { useEffect, useState } from "react";
+import './styled.css';
+
 function AtualizarCoordenadas (){
+
+    const [farmacias, setFarmacias] = useState({
+        razaoSocial: '',
+        cnpj: '',
+        nomeFantasia: '',
+        email: '',
+        telefone: '',
+        celular: '',
+        cep: '',
+        logradouro: '',
+        numero: '',
+        bairro: '',
+        cidade: '',
+        estado: '',
+        complemento: '',
+        latitude: '',
+        longitude: ''
+    });
+
+    const [lista, setLista] = useState([]);
+    
+    useEffect(() => {
+        if(localStorage.getItem('lista_farmacias') !== null) {
+            setLista(JSON.parse(localStorage.getItem('lista_farmacias')))
+        }
+    }, [])
+    
+    useEffect(() => {
+        localStorage.setItem('lista_farmacias', JSON.stringify(lista))
+    }, [lista])
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setFarmacias({...farmacias, [name]: value});
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();console.log(lista);setLista([...lista, farmacias])
+    };
+
     function CoordinatesDisplay({ latitude, longitude }) {
         return (
             <div>
