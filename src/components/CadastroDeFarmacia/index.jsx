@@ -4,6 +4,7 @@ import './styled.css';
 import { PuxarCoordenadas } from "../Maps/PuxarCoordenadas";
 // import axios from "axios";
 
+
 function CadastroDeFarmacia (){
 
     // const [ dados, setDados] = useState ([]);
