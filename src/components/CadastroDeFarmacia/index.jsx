@@ -187,38 +187,7 @@ function CadastroDeFarmacia (){
             value={farmacias.celular} 
             onChange={handleChange} />
 
-            </div>
-
-            <div className="text-field">
-
-            <div className="buscar-cep-container">
-             <TextField 
-            className="buscar-cep-imput" 
-            label="CEP" 
-            required = {true} 
-            variant="outlined" 
-            name="cep" 
-            value={farmacias.cep} 
-            onChange={handleChange} /> 
-                <Button 
-            className="buscar-cep-button" 
-            variant="contained" 
-            onClick={pegarCep}>
-            Buscar CEP
-            </Button>  
-            </div>
-            <TextField label="Logradouro" required = {true} variant="outlined" name="logradouro" value={farmacias.logradouro} onChange={handleChange} />
-
-            <TextField label="Numero" required = {true} variant="outlined" name="numero" value={farmacias.numero} onChange={handleChange} />
-
-            <TextField label="Bairro" required = {true} variant="outlined" name="bairro" value={farmacias.bairro} onChange={handleChange} />
-
-
-            <TextField label="Cidade" required = {true} variant="outlined" name="cidade" value={farmacias.cidade} onChange={handleChange} />
-            
-            <TextField label="Estado" required = {true} variant="outlined" name="estado" value={farmacias.estado} onChange={handleChange} />
-
-            <TextField label="Complemento" required = {false} variant="outlined" name="complemento" value={farmacias.complemento} onChange={handleChange} />
+           
             <div className="latitude-longitude-container">
                     <TextField
                         label="Latitude"
