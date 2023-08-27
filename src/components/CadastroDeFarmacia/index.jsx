@@ -2,22 +2,13 @@ import { Button, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import './styled.css';
 import { PuxarCoordenadas } from "../Maps/PuxarCoordenadas";
+import {HandleSubmit} from "./PegarCepCadastro"
 // import axios from "axios";
+
+  
 
 
 function CadastroDeFarmacia (){
-
-    // const atualizarCoordenadas = (lat, lng) => {
-    //     setFarmacias({
-    //         ...farmacias,
-    //         coordenadas: {
-    //             ...farmacias.coordenadas,
-    //             latitude: lat,
-    //             longitude: lng
-    //         }
-    //     });
-    // };
-
     const [farmacias, setFarmacias] = useState({
         razaoSocial: '',
         cnpj: '',
@@ -34,52 +25,23 @@ function CadastroDeFarmacia (){
         complemento: '',
         latitude: '',
         longitude: ''
-    });
+    });    
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setFarmacias({...farmacias, [name]: value});
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();console.log(lista);setLista([...lista, farmacias])
+    };
     const [lista, setLista] = useState([]);
     useEffect(() => {
         if(localStorage.getItem('lista_farmacias') !== null) {
             setLista(JSON.parse(localStorage.getItem('lista_farmacias')))
         }
-    }, [])
-    
+    }, [])    
     useEffect(() => {
         localStorage.setItem('lista_farmacias', JSON.stringify(lista))
-    }, [lista])
-
-    const handleChange = (e) => {
-        const {name, value} = e.target;
-        setFarmacias({...farmacias, [name]: value});
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();console.log(lista);setLista([...lista, farmacias])
-    };
-
-
-     
-     async function pegarCep () {
-        await fetch (`http://viacep.com.br/ws/${farmacias.cep}/json/`)
-        .then(resposta => resposta.json() )
-        .then (dados => {
-            setFarmacias({
-                ...farmacias,
-                bairro: dados.bairro,
-                logradouro: dados.logradouro,
-                cidade: dados.localidade,
-                estado: dados.uf
-
-            });
-            console.log(dados)
-        })  
-        function CoordinatesDisplay({ latitude, longitude }) {
-            return (
-                <div>
-                    {/* <p>Latitude: {latitude}</p>
-                    <p>Longitude: {longitude}</p> */}
-                </div>
-            );
-        }
-        
+    }, [lista])  
         function CoordinatesDisplay({ latitude, longitude }) {
             return (
                 <div>
@@ -119,9 +81,6 @@ function CadastroDeFarmacia (){
                 />
             );
         }
-
-
-
      return (
         <form className="container" onSubmit={handleSubmit}> 
         
@@ -174,37 +133,12 @@ function CadastroDeFarmacia (){
             name="celular" 
             value={farmacias.celular} 
             onChange={handleChange} />
-
-           
-            <div className="latitude-longitude-container">
-                    <TextField
-                        label="Latitude"
-                        required
-                        variant="outlined"
-                        name="latitude"
-                        value={farmacias.coordenadas?.latitude || ''}
-                        onChange={handleChange}
-                    />
-                    <TextField
-                        label="Longitude"
-                        required
-                        variant="outlined"
-                        name="longitude"
-                        value={farmacias.coordenadas?.longitude || ''}
-                        onChange={handleChange}
-                    />
-                    {/* <PuxarCoordenadas onUpdateCoords={atualizarCoordenadas} /> */}
-            <Button className="current-location-button" variant="contained" onClick={PuxarCoordenadas}>Inserir Coordenadas Manualmente</Button>
-            </div> 
-
             </div>
             <div className="button-container">
             <Button variant="contained"> LIMPAR </Button>
-            <Button onClick={pegarCep} type="submit" variant="contained"> SALVAR </Button>
+            <Button onClick={handleSubmit} type="submit" variant="contained"> SALVAR </Button>
             </div>
         </form>
-        
-
     )
 };
 
