@@ -94,7 +94,7 @@ function AtualizarCoordenadas (){
         });        
     }
     return(
-        <form className="container" onSubmit={handleSubmit}>
+        <form className="container-2" onSubmit={handleSubmit}>
             <div className="text-field">
                 <div className="latitude-longitude-container">
                 <TextField
