@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-/**
- * Componente para exibir as coordenadas.
- * @param {number} latitude - A latitude.
- * @param {number} longitude - A longitude.
- */
 function CoordinatesDisplay({ latitude, longitude }) {
     return (
         <div>
@@ -14,21 +9,17 @@ function CoordinatesDisplay({ latitude, longitude }) {
     );
 }
 
-/**
- * Componente para puxar e exibir coordenadas.
- * @param {function} onUpdateCoords - Função para atualizar as coordenadas.
- * @param {boolean} isMounted - Indica se o componente está montado.
- */
-function PuxarCoordenadas({ onUpdateCoords, isMounted }) {
+function PuxarCoordenadas({ onUpdateCoords }) {
     const [userLocation, setUserLocation] = useState({ lat: 0, lng: 0 });
 
     useEffect(() => {
         const getUserLocation = () => {
-            if (navigator.geolocation && isMounted) {
+            if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
                     position => {
                         const { latitude, longitude } = position.coords;
                         setUserLocation({ lat: latitude, lng: longitude });
+                        // Chamar a função de atualização com as coordenadas
                         onUpdateCoords(latitude, longitude);
                     },
                     error => {
@@ -39,9 +30,8 @@ function PuxarCoordenadas({ onUpdateCoords, isMounted }) {
                 console.error('Não foi possível obter as coordenadas.');
             }
         };
-
         getUserLocation();
-    }, [onUpdateCoords, isMounted]);
+    }, [onUpdateCoords]);
 
     return (
         <CoordinatesDisplay
@@ -51,4 +41,4 @@ function PuxarCoordenadas({ onUpdateCoords, isMounted }) {
     );
 }
 
-export { PuxarCoordenadas, CoordinatesDisplay };
+export { PuxarCoordenadas };

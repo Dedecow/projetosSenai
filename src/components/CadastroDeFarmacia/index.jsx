@@ -7,6 +7,16 @@ import { PuxarCoordenadas } from "../Maps/PuxarCoordenadas";
 
 function CadastroDeFarmacia (){
 
+    // const atualizarCoordenadas = (lat, lng) => {
+    //     setFarmacias({
+    //         ...farmacias,
+    //         coordenadas: {
+    //             ...farmacias.coordenadas,
+    //             latitude: lat,
+    //             longitude: lng
+    //         }
+    //     });
+    // };
 
     const [farmacias, setFarmacias] = useState({
         razaoSocial: '',
@@ -109,16 +119,16 @@ function CadastroDeFarmacia (){
                 />
             );
         }
-        const atualizarCoordenadas = (lat, lng) => {
-            setFarmacias({
-                ...farmacias,
-                coordenadas: {
-                    ...farmacias.coordenadas,
-                    latitude: lat,
-                    longitude: lng
-                }
-            });
-        };
+        // const atualizarCoordenadas = (lat, lng) => {
+        //     setFarmacias({
+        //         ...farmacias,
+        //         coordenadas: {
+        //             ...farmacias.coordenadas,
+        //             latitude: lat,
+        //             longitude: lng
+        //         }
+        //     });
+        // };
 
        
      }
