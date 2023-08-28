@@ -1,14 +1,15 @@
+import { AtualizarCoordenadas } from "../../components/CadastroDeFarmacia/AtualizarCoordenadas";
 import { NavBar } from "../../components/Header";
 import { MapComponent } from "../../components/Maps";
-import { PuxarCoordenadas } from "../../components/Maps/PuxarCoordenadas";
+
 
 function MapaDeFarmaciasPage (){
 
     return(
         <>
         <NavBar/>
+        <AtualizarCoordenadas/>
         <MapComponent/>
-        <PuxarCoordenadas/>
         </>
         
     );

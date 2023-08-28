@@ -36,10 +36,18 @@ function PuxarCoordenadas({ onUpdateCoords }) {
   }, [onUpdateCoords]);
 
   return (
-    <CoordinatesDisplay
+      <div className='exibir-coordenadas'>
+        <p 
+        className='indicador-localidade'>
+        Você está Aqui. &#128071;
+      </p>
+
+      <CoordinatesDisplay
       latitude={userLocation.lat}
       longitude={userLocation.lng}
     />
+    </div>
+    
   );
 }
 
