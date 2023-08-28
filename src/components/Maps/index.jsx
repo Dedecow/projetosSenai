@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
-import { LatLngExpression, LeafletMouseEvent } from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
 function MapComponent() {
-  const initialCoords: LatLngExpression = [51.505, -0.09];
+  const initialCoords = [51.505, -0.09];
   const [formValues, setFormValues] = useState({
     coords: initialCoords,
   });
 
-  const handleMapClick = (event: LeafletMouseEvent) => {
-    const clickedCoords: LatLngExpression = [event.latlng.lat, event.latlng.lng];
-    setFormValues((prev) => ({
+  const handleMapClick = event => {
+    const clickedCoords = [event.latlng.lat, event.latlng.lng];
+    setFormValues(prev => ({
       ...prev,
       coords: clickedCoords,
     }));
@@ -22,8 +22,8 @@ function MapComponent() {
         center={formValues.coords}
         zoom={13}
         style={{ height: '400px', width: '100%' }}
-        whenCreated={(map) => {
-          map.addEventListener("click", handleMapClick);
+        whenCreated={map => {
+          map.addEventListener('click', handleMapClick);
         }}
       >
         <TileLayer
