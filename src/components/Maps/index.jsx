@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import { PuxarCoordenadas } from './PuxarCoordenadas';
+import { AtualizarCoordenadas } from '../CadastroDeFarmacia/AtualizarCoordenadas';
 
 function MapComponent() {
   const initialCoords = [51.505, -0.09];
@@ -18,6 +20,7 @@ function MapComponent() {
 
   return (
     <div>
+      <AtualizarCoordenadas/>
       <MapContainer
         center={formValues.coords}
         zoom={13}
