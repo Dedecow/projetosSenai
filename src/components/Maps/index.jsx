@@ -17,6 +17,7 @@ function MapComponent() {
       coords: clickedCoords,
     }));
   };
+  
 
   return (
     <div>
@@ -33,7 +34,7 @@ function MapComponent() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={formValues.coords} />
+        {/* <Marker position={formValues.coords} /> */}
       </MapContainer>
     </div>
   );
