@@ -1,11 +1,50 @@
-import React, { useState } from 'react';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import React, { useState, useEffect } from 'react';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { PuxarCoordenadas } from './PuxarCoordenadas';
-import { AtualizarCoordenadas } from '../CadastroDeFarmacia/AtualizarCoordenadas';
+import './styled.css';
+
+function CoordinatesDisplay({ latitude, longitude }) {
+  return (
+    <div className='mostrar-coordenadas'>
+      <p>Latitude: {latitude}</p>
+      <p>Longitude: {longitude}</p>
+    </div>
+  );
+}
+
+function PuxarCoordenadas({ onUpdateCoords }) {
+  const [userLocation, setUserLocation] = useState({ lat: 0, lng: 0 });
+
+  useEffect(() => {
+    const getUserLocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            const { latitude, longitude } = position.coords;
+            setUserLocation({ lat: latitude, lng: longitude });
+            onUpdateCoords(latitude, longitude);
+          },
+          error => {
+            console.error(error);
+          }
+        );
+      } else {
+        console.error('Não foi possível obter as coordenadas.');
+      }
+    };
+    getUserLocation();
+  }, [onUpdateCoords]);
+
+  return (
+    <CoordinatesDisplay
+      latitude={userLocation.lat}
+      longitude={userLocation.lng}
+    />
+  );
+}
 
 function MapComponent() {
-  const initialCoords = [51.505, -0.09];
+  const initialCoords = [-27.5954,-48.5480 ];
   const [formValues, setFormValues] = useState({
     coords: initialCoords,
   });
@@ -17,12 +56,16 @@ function MapComponent() {
       coords: clickedCoords,
     }));
   };
-  
 
   return (
     <div>
-      <AtualizarCoordenadas/>
+      <PuxarCoordenadas
+        onUpdateCoords={(latitude, longitude) => {
+          setFormValues({ coords: [latitude, longitude] });
+        }}
+      />
       <MapContainer
+        className='map-container'
         center={formValues.coords}
         zoom={13}
         style={{ height: '400px', width: '100%' }}
@@ -34,8 +77,8 @@ function MapComponent() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {/* <Marker position={formValues.coords} /> */}
       </MapContainer>
+      
     </div>
   );
 }
