@@ -10,8 +10,6 @@ function CadastroFarmaciaPage (){
         <div>
         <NavBar/>
         <CadastroDeFarmacia/> 
-        {/* <PegarCepCadastro/>
-        <AtualizarCoordenadas/>        */}
         </div>
         
     )
