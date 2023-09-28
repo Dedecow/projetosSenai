@@ -1,4 +1,4 @@
-# Projeto Avaliativo - Senai: DevinPharm-Mapas
+# Projeto Avaliativo - Aberto para acesso PSI- SAUDE -CAIXA
 
 Bem-vindo ao Projeto Avaliativo desenvolvido durante o módulo 1 do curso, focado em criar um sistema front-end em React voltado para farmácias e saúde pública.
 
